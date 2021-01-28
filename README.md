@@ -8,7 +8,7 @@ For a given JSON request of the format:
     "text": "hello 2 times  "
 }
 ```
-It will return a response of the form:
+It will return a response of the format:
 ```json
 {
     "textLength": {
