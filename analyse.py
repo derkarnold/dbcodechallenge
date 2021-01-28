@@ -2,6 +2,8 @@ import re
 
 _NON_ENGLISH_LETTERS_RE = re.compile('[^a-z]+', flags=re.IGNORECASE)
 
+
+
 class TextAnalyser(object):
     '''
     Class to analyse text and provide insight into its various features.
@@ -91,3 +93,4 @@ class TextAnalyserTextLength(object):
     def __init__(self, lenWithSpaces, lenWithoutSpaces):
         self._withSpaces = lenWithSpaces
         self._withoutSpaces = lenWithoutSpaces
+        
