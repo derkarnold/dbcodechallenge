@@ -68,7 +68,7 @@ function SQLEngine(database) {
     }
 
     this.createWhereFilter = function (column, op, value, tableName) {
-        if (!column && !op && !value) {
+        if (!column || !op || !value) {
             return (record) => true;
         } else {
             var pColumnName
