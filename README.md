@@ -27,3 +27,5 @@ The core code is in analyser.py, with unit tests to be found in test_analyser.py
 These unit tests are run automatically via a GitHub workflow when the main branch is pushed to GitHub.
 
 Provided the tests pass, Heroku pulls the latest changes and deploys them automatically.
+
+Please see the "lastyear" and "puzzles" folders for other challenges.
