@@ -15,9 +15,9 @@ function SQLEngine(database) {
         "from",
         "(?<table>[a-z]+)",
         "(?:where",
-        "(?<whereColumn>[a-z.]+)",
-        "(?<whereOp><>|[<>=])",
-        "(?<whereValue>(?:'[^']+')|(?:\"[^\"]+\")|(?:[0-9]+))" +
+            "(?<whereColumn>[a-z.]+)",
+            "(?<whereOp><>|[<>=])",
+            "(?<whereValue>(?:'[^']+')|(?:\"[^\"]+\")|(?:[0-9]+))" +
         ")?",
     ].join(TOKEN_BOUNDARY), "i");
 
