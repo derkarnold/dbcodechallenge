@@ -8,14 +8,17 @@ function SQLEngine(database) {
     var COLUMN_SEPARATOR = `,${TOKEN_BOUNDARY}`;
     var COLUMN_SEPARATOR_REGEXP = RegExp(COLUMN_SEPARATOR);
 
+    // Column name in the form table.column.
+    var TABLE_AND_COL_NAME = "[a-z]+\\.[a-z]+";
+
     // Regular expression to tokenise our query.
     var QUERY_REGEXP = new RegExp([
         "select",
-        `(?<columns>(?:[a-z.]+)(?:${COLUMN_SEPARATOR}[a-z.]+)*?)`,
+        `(?<columns>(?:${TABLE_AND_COL_NAME})(?:${COLUMN_SEPARATOR}[a-z.]+)*?)`,
         "from",
         "(?<table>[a-z]+)",
         "(?:where",
-            "(?<whereColumn>[a-z.]+)",
+            `(?<whereColumn>${TABLE_AND_COL_NAME})`,
             "(?<whereOp><>|[<>=])",
             "(?<whereValue>(?:'[^']+')|(?:\"[^\"]+\")|(?:[0-9]+))" +
         ")?",
